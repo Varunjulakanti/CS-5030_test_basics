@@ -28,7 +28,7 @@ class todoservice{
     }
 
     delete_todo(id){
-        this.todo_data["todo"].slice(id,1)
+        this.todo_data["todo"].splice(id,1)
     }
 
     update_todo(id, todo){
