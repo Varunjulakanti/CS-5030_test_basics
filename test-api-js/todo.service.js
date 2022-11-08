@@ -4,13 +4,13 @@ class todoservice{
             "title": "T1",
             "description": "D1",
             "done": false
-        },{
-            "title": "T1",
-            "description": "D1",
+        },{ 
+            "title": "T2",
+            "description": "D2",
             "done": false
         },{
-            "title": "T1",
-            "description": "D1",
+            "title": "T3",
+            "description": "D2",
             "done": false
         }]
     }
@@ -19,19 +19,20 @@ class todoservice{
     }
 
     get_todos(){
-        return this.todos;
+        this.todos = this.todo_data;
+                return this.todos;
     }
 
     add_todo(todo){
-        // Your code here
+        this.todo_data["todo"].push(todo)
     }
 
     delete_todo(id){
-        // Your code here
+        this.todo_data["todo"].slice(id,1)
     }
 
     update_todo(id, todo){
-        // Your code here
+        this.todo_data["todo"][id]=todo
     }
 }
 
